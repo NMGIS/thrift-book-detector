@@ -30,7 +30,7 @@ function App() {
     setSubmitted(true);
 
     try {
-      const response = await fetch("http://localhost:8000/upload", {
+      const response = await fetch("https://thrift-book-detector-backend.onrender.com/upload", {
         method: "POST",
         body: formData,
       });
