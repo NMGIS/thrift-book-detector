@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-
+import './App.css';
 function App() {
   const [image, setImage] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(null);
@@ -8,7 +8,7 @@ function App() {
   const [visualMatchTable, setVisualMatchTable] = useState([]);
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const fileInputRef = useRef(null); // NEW
+  const fileInputRef = useRef(null);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -55,15 +55,21 @@ function App() {
     setVisualMatchTable([]);
     setLoading(false);
     setSubmitted(false);
-
     if (fileInputRef.current) {
-      fileInputRef.current.value = null; // FULL RESET of file input
+      fileInputRef.current.value = null;
     }
   };
 
   return (
-    <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>
+    <div className="container">
       <h2>📚 Thrift Book Finder</h2>
+
+      <p className="instructions" style={{ fontSize: "0.85rem" }}>
+        Upload a photo of a unsorted bookshelf and this app will scan it to detect
+        book titles and authors from my personal list. A list upload feature is comming soon. 
+        Matches are highlighted directly on the image.
+        Powered by Google Cloud Vision and a custom Python backend.
+      </p>
 
       <input
         type="file"
@@ -76,27 +82,25 @@ function App() {
         <img
           src={`data:image/jpeg;base64,${highlightedImage}`}
           alt="Detected text"
-          style={{ width: '100%', marginTop: '1rem', border: '2px solid #333' }}
         />
       ) : (
         previewUrl && (
           <img
             src={previewUrl}
             alt="Uploaded preview"
-            style={{ width: '100%', marginTop: '1rem' }}
           />
         )
       )}
 
-      <div style={{ marginTop: '1rem' }}>
+      <div>
         <button onClick={handleSubmit}>Upload and Scan</button>
-        <button onClick={handleReset} style={{ marginLeft: '1rem' }}>Reset</button>
+        <button onClick={handleReset}>Reset</button>
       </div>
 
       {loading && <p>🔍 Scanning image...</p>}
 
       {matches.length > 0 && (
-        <div style={{ marginTop: '2rem' }}>
+        <div className="card">
           <h3>✅ Matches Found</h3>
           <ul>
             {matches.map((match, index) => (
@@ -109,19 +113,19 @@ function App() {
       )}
 
       {visualMatchTable.length > 0 && (
-        <div style={{ marginTop: '2rem' }}>
+        <div className="card">
           <h3>🧠 OCR Match Table</h3>
-          <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+          <table>
             <thead>
               <tr>
-                <th style={{ textAlign: 'left', borderBottom: '1px solid #ccc' }}>OCR Text</th>
-                <th style={{ textAlign: 'left', borderBottom: '1px solid #ccc' }}>Matched Phrase</th>
+                <th>OCR Text</th>
+                <th>Matched Phrase</th>
               </tr>
             </thead>
             <tbody>
               {visualMatchTable.map((row, index) => (
                 <tr key={index}>
-                  <td style={{ padding: '0.5rem 0' }}>{row.ocr_text}</td>
+                  <td>{row.ocr_text}</td>
                   <td>{row.matched_phrase}</td>
                 </tr>
               ))}
