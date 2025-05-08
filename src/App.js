@@ -78,6 +78,8 @@ const handleListUpload = (e) => {
 
 const csvInputRef = useRef(null);
 
+const [showHelp, setShowHelp] = useState(false);
+
 
   return (
     <div className="container">
@@ -85,11 +87,12 @@ const csvInputRef = useRef(null);
 
       <p className="instructions" style={{ fontSize: "0.85rem" }}>
         Upload a photo of a unsorted bookshelf and this app will scan it to detect
-        book titles and authors from my personal list. A list upload feature is comming soon. 
+        book titles and authors from a list. If no custom list is uploaded, my personal list will be used by default.
+        A list upload feature is comming soon. 
         Matches are highlighted directly on the image.
         Powered by Google Cloud Vision and a custom Python backend.
       </p>
-
+        
       <input
         type="file"
         accept="image/*"
@@ -110,13 +113,27 @@ const csvInputRef = useRef(null);
           />
         )
       )}
-      <p style={{ marginTop: '1rem' }}>Optional: Upload a custom list</p>
-      <input
-        type="file"
-        accept=".csv"
-        onChange={handleListUpload}
-        ref={csvInputRef}
-      />
+      <div className={`csv-upload-box ${showHelp ? 'expanded' : 'collapsed'}`}>
+        <div className="csv-dropdown-toggle" onClick={() => setShowHelp(!showHelp)}>
+          <span><strong>Optional:</strong> Upload a custom list (.csv)</span>
+          <span>{showHelp ? '▲' : '▼'}</span>
+        </div>
+
+        {showHelp && (
+          <div className="dropdown-expanded">
+            <p>Your CSV file should look like this:</p>
+            <pre>{`phrase
+Cormac McCarthy
+All the Pretty Horses
+Dante Inferno`}</pre>
+            <p>
+              Save it as a <strong>.csv</strong>. Make sure the first row is exactly <code>phrase</code> and each line after is a book title, author, or keyword.
+            </p>
+            <input type="file" accept=".csv" onChange={handleListUpload} ref={csvInputRef} />
+          </div>
+        )}
+      </div>
+
       <div>
         <button onClick={handleSubmit}>Upload and Scan</button>
         <button onClick={handleReset}>Reset</button>

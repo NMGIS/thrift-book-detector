@@ -71,4 +71,39 @@ th, td {
   color: #fff;
 }
 
+.csv-upload-box {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 1rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.csv-dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.csv-upload-box.collapsed .dropdown-expanded {
+  display: none;
+}
+
+.dropdown-expanded {
+  margin-top: 1rem;
+  color: #ccc;
+}
+
+.dropdown-expanded pre {
+  background-color: #121212;
+  padding: 0.75rem;
+  border-radius: 4px;
+  color: #fff;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
 
