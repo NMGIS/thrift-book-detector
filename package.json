@@ -3,7 +3,7 @@
   "name": "thrift-book-detector",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/NMGIS/thrift-book-detector",
+  "homepage": "https://nevinm.com/thrift-book-detector/",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
