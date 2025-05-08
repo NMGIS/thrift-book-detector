@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/thrift-book-detector/static/css/main.e6c13ad2.css",
-    "main.js": "/thrift-book-detector/static/js/main.fd4c46c7.js",
+    "main.css": "/thrift-book-detector/static/css/main.8b6fce8e.css",
+    "main.js": "/thrift-book-detector/static/js/main.994e1256.js",
     "static/js/453.c2a6771f.chunk.js": "/thrift-book-detector/static/js/453.c2a6771f.chunk.js",
     "index.html": "/thrift-book-detector/index.html",
-    "main.e6c13ad2.css.map": "/thrift-book-detector/static/css/main.e6c13ad2.css.map",
-    "main.fd4c46c7.js.map": "/thrift-book-detector/static/js/main.fd4c46c7.js.map",
+    "main.8b6fce8e.css.map": "/thrift-book-detector/static/css/main.8b6fce8e.css.map",
+    "main.994e1256.js.map": "/thrift-book-detector/static/js/main.994e1256.js.map",
     "453.c2a6771f.chunk.js.map": "/thrift-book-detector/static/js/453.c2a6771f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.fd4c46c7.js"
+    "static/css/main.8b6fce8e.css",
+    "static/js/main.994e1256.js"
   ]
 }
