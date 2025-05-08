@@ -88,8 +88,6 @@ const [showHelp, setShowHelp] = useState(false);
       <p className="instructions" style={{ fontSize: "0.85rem" }}>
         Upload a photo of a unsorted bookshelf and this app will scan it to detect
         book titles and authors from a list. If no custom list is uploaded, my personal list will be used by default.
-        A list upload feature is comming soon. 
-        Matches are highlighted directly on the image.
         Powered by Google Cloud Vision and a custom Python backend.
       </p>
         
@@ -127,7 +125,7 @@ Cormac McCarthy
 All the Pretty Horses
 Dante Inferno`}</pre>
             <p>
-              Save it as a <strong>.csv</strong>. Make sure the first row is exactly <code>phrase</code> and each line after is a book title, author, or keyword.
+              Save it as a <strong>.csv</strong>. Make sure the first row is exactly <strong>"phrase"</strong> and each line after is a book title, author, or keyword.
             </p>
             <input type="file" accept=".csv" onChange={handleListUpload} ref={csvInputRef} />
           </div>
