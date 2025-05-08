@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/NMGIS/thrift-book-detector/static/css/main.e6c13ad2.css",
+    "main.js": "/NMGIS/thrift-book-detector/static/js/main.d4f7ef50.js",
+    "static/js/453.c2a6771f.chunk.js": "/NMGIS/thrift-book-detector/static/js/453.c2a6771f.chunk.js",
+    "index.html": "/NMGIS/thrift-book-detector/index.html",
+    "main.e6c13ad2.css.map": "/NMGIS/thrift-book-detector/static/css/main.e6c13ad2.css.map",
+    "main.d4f7ef50.js.map": "/NMGIS/thrift-book-detector/static/js/main.d4f7ef50.js.map",
+    "453.c2a6771f.chunk.js.map": "/NMGIS/thrift-book-detector/static/js/453.c2a6771f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.d4f7ef50.js"
+  ]
+}
