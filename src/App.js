@@ -26,6 +26,10 @@ function App() {
     const formData = new FormData();
     formData.append("image", image);
 
+    if (customList) {
+      formData.append("list", customList); // 👈 include uploaded CSV
+    }
+
     setLoading(true);
     setSubmitted(true);
 
@@ -55,10 +59,25 @@ function App() {
     setVisualMatchTable([]);
     setLoading(false);
     setSubmitted(false);
+    setCustomList(null); // clear list state
+
     if (fileInputRef.current) {
       fileInputRef.current.value = null;
     }
+    if (csvInputRef.current) {
+      csvInputRef.current.value = null;
+    }
   };
+
+const [customList, setCustomList] = useState(null);
+
+const handleListUpload = (e) => {
+  const file = e.target.files[0];
+  setCustomList(file);
+};
+
+const csvInputRef = useRef(null);
+
 
   return (
     <div className="container">
@@ -91,7 +110,13 @@ function App() {
           />
         )
       )}
-
+      <p style={{ marginTop: '1rem' }}>Optional: Upload a custom list</p>
+      <input
+        type="file"
+        accept=".csv"
+        onChange={handleListUpload}
+        ref={csvInputRef}
+      />
       <div>
         <button onClick={handleSubmit}>Upload and Scan</button>
         <button onClick={handleReset}>Reset</button>
