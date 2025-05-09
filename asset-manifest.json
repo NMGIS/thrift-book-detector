@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/thrift-book-detector/static/css/main.aff0770e.css",
-    "main.js": "/thrift-book-detector/static/js/main.dcf72679.js",
+    "main.css": "/thrift-book-detector/static/css/main.97e814b9.css",
+    "main.js": "/thrift-book-detector/static/js/main.706fd301.js",
     "static/js/453.c2a6771f.chunk.js": "/thrift-book-detector/static/js/453.c2a6771f.chunk.js",
     "index.html": "/thrift-book-detector/index.html",
-    "main.aff0770e.css.map": "/thrift-book-detector/static/css/main.aff0770e.css.map",
-    "main.dcf72679.js.map": "/thrift-book-detector/static/js/main.dcf72679.js.map",
+    "main.97e814b9.css.map": "/thrift-book-detector/static/css/main.97e814b9.css.map",
+    "main.706fd301.js.map": "/thrift-book-detector/static/js/main.706fd301.js.map",
     "453.c2a6771f.chunk.js.map": "/thrift-book-detector/static/js/453.c2a6771f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.aff0770e.css",
-    "static/js/main.dcf72679.js"
+    "static/css/main.97e814b9.css",
+    "static/js/main.706fd301.js"
   ]
 }
