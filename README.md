@@ -2,6 +2,9 @@
 
 Thrift Book Finder helps you quickly identify valuable or interesting books on unsorted thrift store shelves. Instead of scanning titles one by one, just upload a photo and the app highlights books from your personal list using OCR and fuzzy matching.
 
+## 🔗 Live App
+https://nmgis.github.io/thrift-book-detector
+
 ## 🚀 What It Does
 
 - Upload a photo of a bookshelf
