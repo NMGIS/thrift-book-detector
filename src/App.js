@@ -113,21 +113,18 @@ const [showHelp, setShowHelp] = useState(false);
       )}
       <div className={`csv-upload-box ${showHelp ? 'expanded' : 'collapsed'}`}>
         <div className="csv-dropdown-toggle" onClick={() => setShowHelp(!showHelp)}>
-          <span><strong>Optional:</strong> Upload a custom list (.csv)</span>
+          <span><strong>Optional:</strong> Upload a custom list (.csv or .txt)</span>
           <span>{showHelp ? '▲' : '▼'}</span>
         </div>
 
         {showHelp && (
           <div className="dropdown-expanded">
-            <p>Your CSV file should look like this:</p>
-            <pre>{`phrase
-Cormac McCarthy
-All the Pretty Horses
-Dante Inferno`}</pre>
             <p>
-              Save it as a <strong>.csv</strong>. Make sure the first row is exactly <strong>"phrase"</strong> and each line after is a book title, author, or keyword.
+              To use a custom list, upload a plain text or CSV file containing book titles or authors
+              separated by commas. Matching is not case-sensitive. For example:<br /><br />
+              <em>Lord of the Rings, Ernest Hemingway, Moby Dick, John Steinbeck, Cormac McCarthy</em>
             </p>
-            <input type="file" accept=".csv" onChange={handleListUpload} ref={csvInputRef} />
+            <input type="file" accept=".csv,.txt,text/plain" onChange={handleListUpload} ref={csvInputRef} />
           </div>
         )}
       </div>
