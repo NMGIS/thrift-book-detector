@@ -123,3 +123,26 @@ th, td {
   color: #da5b4b;
 }
 
+.expandable-toggle {
+  margin-top: 2rem;
+  cursor: pointer;
+  color: #ccc;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.expandable-toggle:hover {
+  color: #fff;
+}
+
+.expandable-content {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.expandable-content ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+

@@ -80,6 +80,8 @@ const csvInputRef = useRef(null);
 
 const [showHelp, setShowHelp] = useState(false);
 
+const [showTech, setShowTech] = useState(false);
+
 
   return (
     <div className="container">
@@ -88,9 +90,8 @@ const [showHelp, setShowHelp] = useState(false);
       <p className="instructions" style={{ fontSize: "0.85rem" }}>
         Upload a photo of a unsorted bookshelf and this app will scan it to detect
         book titles and authors from a list. If no custom list is uploaded, my personal list will be used by default.
-        Powered by Google Cloud Vision and a custom Python backend.
       </p>
-        
+      
       <input
         type="file"
         accept="image/*"
@@ -174,6 +175,26 @@ const [showHelp, setShowHelp] = useState(false);
       {submitted && matches.length === 0 && !loading && (
         <p style={{ marginTop: '2rem' }}>❌ No matches found.</p>
       )}
+      <p>
+      <div className="expandable-section">
+        <div className="expandable-toggle" onClick={() => setShowTech(!showTech)}>
+          <strong>About:</strong> Technologies Used in This App {showTech ? '▲' : '▼'}
+        </div>
+
+        {showTech && (
+          <div className="expandable-content">
+            <ul>
+              <li><strong>React</strong> – for building the frontend user interface</li>
+              <li><strong>RESTful Flask (Python) API</strong> – processes image uploads and returns matches</li>
+              <li><strong>Google Cloud Vision API</strong> – for optical character recognition (OCR)</li>
+              <li><strong>RapidFuzz</strong> – for fuzzy matching scanned text against your list</li>
+              <li><strong>GitHub Pages</strong> – hosts the frontend site</li>
+              <li><strong>Render</strong> – hosts the Python/Flask backend</li>
+            </ul>
+          </div>
+        )}
+      </div>
+      </p>
       <footer className="footer">
         <a href="https://github.com/NMGIS" target="_blank" rel="noopener noreferrer">
           <i className="fa-brands fa-github fa-2x"></i>
