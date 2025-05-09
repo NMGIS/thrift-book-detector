@@ -174,6 +174,18 @@ const [showHelp, setShowHelp] = useState(false);
       {submitted && matches.length === 0 && !loading && (
         <p style={{ marginTop: '2rem' }}>❌ No matches found.</p>
       )}
+      <footer className="footer">
+        <a href="https://github.com/NMGIS" target="_blank" rel="noopener noreferrer">
+          <i className="fa-brands fa-github fa-2x"></i>
+        </a>
+        <a href="https://linkedin.com/in/nevinmcintyregis" target="_blank" rel="noopener noreferrer">
+          <i className="fa-brands fa-linkedin fa-2x"></i>
+        </a>
+        <a href="https://www.nevinm.com" target="_blank" rel="noopener noreferrer">
+          <i className="fa-solid fa-globe fa-2x"></i>
+        </a>
+      </footer>
+
     </div>
   );
 }

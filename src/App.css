@@ -107,3 +107,19 @@ th, td {
   margin-bottom: 1rem;
 }
 
+.footer {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer a {
+  color: #aaa;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #da5b4b;
+}
+
