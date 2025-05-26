@@ -47,7 +47,7 @@ function App() {
       setVisualMatchTable(data.visual_match_table || []);
     } catch (err) {
       setLoading(false);
-      alert("Error processing image. Check the backend console.");
+      alert("Oops! The backend server is starting up (free tier delay). Please wait 10 seconds and try again.");
     }
   };
 
